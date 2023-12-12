@@ -3,7 +3,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework import viewsets
 from account.permission import IsSuperUserUser
 
-from account.serializers import AccountSerializer
+from account.serializers import AccountSerializer, AccountLinkSerializer
 from orders.serializers import OrderSerializer
 from account.models import Account
 
@@ -29,4 +29,4 @@ class OrderAccountListAPIView(generics.ListAPIView):
 class UserViewSet(viewsets.ModelViewSet):
     queryset = Account.objects.all()
     permission_classes = [IsAuthenticated, IsSuperUserUser]
-    serializer_class = AccountSerializer
+    serializer_class = AccountLinkSerializer
