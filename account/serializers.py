@@ -31,7 +31,7 @@ class AccountSerializer(serializers.ModelSerializer):
             )
 
 
-class AccountSerializer(serializers.HyperlinkedModelSerializer):
+class AccountLinkSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Account
         fields = ['url', 'username', 'email', 'is_staff']

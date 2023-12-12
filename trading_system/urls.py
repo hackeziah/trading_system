@@ -23,13 +23,12 @@ from account.views import UserViewSet
 
 
 router = routers.DefaultRouter()
-router.register(r'users', UserViewSet)
+router.register(r'api/users', UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
+    path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls')),
     re_path(r'', include(('orders.urls', 'orders'), namespace="orders")),
     re_path(r'', include(('account.urls', 'account'), namespace="account")),
-
 ]
