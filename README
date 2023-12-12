@@ -36,14 +36,34 @@ Step-by-step instructions on how to install and set up the project.
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/yourproject.git
+git clone https://github.com/hackeziah/trading_system.git
 
 # Navigate to the project directory
-cd yourproject
+cd trading_system
+
+# Create create virtual environment
+python -m venv venv
+venv\Scripts\activate => activate the venv
 
 # Install dependencies
 pip install -r requirements.txt
 
 # Perform migrations
+#You Can use existing data or Create new one delete first the sqlite
 python manage.py migrate
+python manage.py runserver => To Runserver (http://127.0.0.1:8000/)
+#access
+  http://127.0.0.1:8000/admin/login/?next=/admin/
+
+  SuperAdmin
+    user_name: lamadridkevinpaul@gmail.com
+    pass: admin
+  Normal User
+    user_name: camille@gmail.com
+    pass: camille
 ```
+
+### Improvements
+
+- Add More TestCase
+- Add seeding/loaddata
