@@ -1,0 +1,49 @@
+# Exam Filcan 2
+
+Mini Trading System
+
+## Overview
+
+Django application the with api (DRF) features, AdminDjango with UnitTest
+
+## Features
+
+List the key features of your project.
+
+- Admin Feature (Account/Orders/ Stocks)
+- API Endpoints
+  - api/account/user/ => Protfolio and Information
+  - account/orders/ => All Transations (Orders) of the person who login
+  - api/orders/ => All Transactions (Orders) for SuperUser
+  - api-auth/login/ => Login User
+  - api-auth/logout/ => Logout User
+  - api/users/ => User List and Create
+
+## Getting Started
+
+Provide instructions on how to set up the project locally.
+
+### Prerequisites
+
+Specify any prerequisites or dependencies required to run your program.
+
+- Python 3.x
+- virtual enviroment
+
+### Installation
+
+Step-by-step instructions on how to install and set up the project.
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/yourproject.git
+
+# Navigate to the project directory
+cd yourproject
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Perform migrations
+python manage.py migrate
+```
