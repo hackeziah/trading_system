@@ -15,6 +15,7 @@ List the key features of your project.
   - api/account/user/ => Protfolio and Information
   - account/orders/ => All Transations (Orders) of the person who login
   - api/orders/ => All Transactions (Orders) for SuperUser
+  - api/create/order/ => Buy and Sell Stock
   - api-auth/login/ => Login User
   - api-auth/logout/ => Logout User
   - api/users/ => User List and Create
