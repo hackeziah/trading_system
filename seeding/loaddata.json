@@ -1,0 +1,128 @@
+[
+  {
+    "model": "stocks.Stock",
+    "pk": "1",
+    "fields": {
+      "created_at": "2023-12-11T16:41:37Z",
+      "updated_at": "2023-12-11T16:41:37Z",
+      "is_deleted": "0",
+      "symbol": "BLOOM",
+      "name": "Bloomberry Resorts",
+      "price": "1000"
+    }
+  },
+  {
+    "model": "stocks.Stock",
+    "pk": "2",
+    "fields": {
+      "created_at": "2023-12-11T16:42:22Z",
+      "updated_at": "2023-12-11T16:42:22Z",
+      "is_deleted": "0",
+      "symbol": "AC",
+      "name": "Ayala Corp",
+      "price": "648"
+    }
+  },
+  {
+    "model": "stocks.Stock",
+    "pk": "3",
+    "fields": {
+      "created_at": "2023-12-11T16:43:10Z",
+      "updated_at": "2023-12-11T16:43:10Z",
+      "is_deleted": "0",
+      "symbol": "GLO",
+      "name": "Globe Telecom Inc",
+      "price": "1718"
+    }
+  },
+  {
+    "model": "stocks.Stock",
+    "pk": "4",
+    "fields": {
+      "created_at": "2023-12-11T16:47:29Z",
+      "updated_at": "2023-12-11T16:47:29Z",
+      "is_deleted": "0",
+      "symbol": "BDO",
+      "name": "BDO Unibank Inc",
+      "price": "123.4"
+    }
+  },
+  {
+    "model": "stocks.Stock",
+    "pk": "5",
+    "fields": {
+      "created_at": "2023-12-11T16:49:07Z",
+      "updated_at": "2023-12-11T16:49:07Z",
+      "is_deleted": "0",
+      "symbol": "TEL",
+      "name": "PLDT Inc",
+      "price": "1265"
+    }
+  },
+  {
+    "model": "account.Account",
+    "pk": "1",
+    "fields": {
+      "password": "pbkdf2_sha256$600000$LvlSZbqoLsCpgdnRnt8emt$aRJmYl64Lnot/uy5TnaEWvsURrYsySWaAwRm6ZrmrIE=",
+      "last_login": "2023-12-11T14:02:54Z",
+      "is_superuser": "1",
+      "username": "lamadridkevinpaul@gmail.com",
+      "email": "lamadridkevinpaul@gmail.com",
+      "is_staff": "1",
+      "is_active": "1",
+      "date_joined": "2023-12-11T14:02:54Z",
+      "created_at": "2023-12-11T14:02:54Z",
+      "updated_at": "2023-12-12T05:30:50Z",
+      "is_deleted": "0",
+      "first_name": "KEVIN",
+      "last_name": "LAMADRID",
+      "address": "TAGUIG",
+      "phone_number": "09555593145",
+      "balance": "10000"
+    }
+  },
+  {
+    "model": "account.Account",
+    "pk": "2",
+    "fields": {
+      "password": "pbkdf2_sha256$600000$F5yTIhRXQyjv4fDuinakWM$oSS5KFsZ5fmhN6IptWlwl+snCU9erze23dXO1tcCVU0=",
+      "last_login": "2023-12-11T14:02:54Z",
+      "is_superuser": "0",
+      "username": "camille@gmail.com",
+      "email": "camille@gmail.com",
+      "is_staff": "1",
+      "is_active": "1",
+      "date_joined": "2023-12-13T02:28:08Z",
+      "created_at": "2023-12-12T00:03:51Z",
+      "updated_at": "2023-12-12T00:29:34Z",
+      "is_deleted": "0",
+      "first_name": "CAMILLE",
+      "last_name": "LAMADRID",
+      "address": "Blk 38 Lot 27 Sitio Bayani C5 Road Western Bicutan, Metro Manila\nDivine Sari-Sari Store Taguig, Metro Manila",
+      "phone_number": "09165402807",
+      "balance": "10000"
+    }
+  },
+  {
+    "model": "account.Account",
+    "pk": "4",
+    "fields": {
+      "password": "pbkdf2_sha256$600000$OtJBWlDr9TgtiawzK3oHj3$Ic98BumyTGHvyM37PBRDRjfEuONLqBroSsUaD+Hq0Z0=",
+      "last_login": "2023-12-11T14:02:54Z",
+      "is_superuser": "0",
+      "username": "fritche19@gmail.com",
+      "email": "fritche19@gmail.com",
+      "is_staff": "0",
+      "is_active": "1",
+      "date_joined": "2023-12-13T02:28:08Z",
+      "created_at": "2023-12-13T02:28:08Z",
+      "updated_at": "2023-12-13T02:28:29Z",
+      "is_deleted": "0",
+      "first_name": "FRITCHE",
+      "last_name": "IWAYAN",
+      "address": "Guindulman Bohol",
+      "phone_number": "09633822765",
+      "balance": "10000"
+    }
+  }
+]
