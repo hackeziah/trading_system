@@ -12,6 +12,7 @@ List the key features of your project.
 
 - Admin Feature (Account/Orders/ Stocks)
 - API Endpoints
+  - api/docs/ => API Documentation
   - api/account/user/ => Protfolio and Information
   - account/orders/ => All Transations (Orders) of the person who login
   - api/orders/ => All Transactions (Orders) for SuperUser

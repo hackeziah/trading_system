@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #Apps
+    'drf_spectacular',
     'rest_framework',
     'account',
     'base',
@@ -76,11 +77,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'trading_system.wsgi.application'
 REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ]
+}
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Trading System',
+    'DESCRIPTION': 'Mini Trading System',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    # OTHER SETTINGS
 }
 LOGIN_REDIRECT_URL = "api/account/user/"
 
