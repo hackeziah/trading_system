@@ -36,7 +36,7 @@ class OrderCreateSerializerTest(TestCase):
             username='testuser',
             password='testpassword',
         )
-        self.data = {'stock': self.stock.id, 'quantity': 5, 'order_type': 'Buy'}
+        self.data = {'stock': self.stock.id, 'quantity': 1, 'order_type': True}
         self.client = APIClient()
         self.client.force_authenticate(user=self.user)
 
@@ -44,5 +44,7 @@ class OrderCreateSerializerTest(TestCase):
     def test_create_order(self):
         url = '/api/create/order/'
         response = self.client.post(url, self.data, format='json')
-        # self.assertEqual(response.status_code, 201)
-        # Currently working
+        self.assertEqual(response.status_code, 201)
+        assert self.user.balance == 10000
+        assert self.stock.name == response.data['stock']['name']
+        assert self.data['quantity'] == response.data['quantity']

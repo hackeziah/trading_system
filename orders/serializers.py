@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from stocks.serializers import StockSerializer
 
+from decimal import Decimal
 from account.models import Account
 from orders.models import Order
 
@@ -55,7 +56,7 @@ class OrderCreateSerializer(serializers.ModelSerializer):
         stock_ids_set = {item['stock_id'] for item in list_stocks}
         balance = account.balance
         stock_price = stock.price if stock.price else 0
-        total_amount = quantity * stock_price
+        total_amount = Decimal(quantity) * Decimal(stock_price)
 
         if (
             (order_type == 0) and 
@@ -74,9 +75,10 @@ class OrderCreateSerializer(serializers.ModelSerializer):
             order_type=order_type,
             quantity=quantity,
         )
+        balance = Decimal(account.balance)
         if order_type == 1:
-            account.balance -= total_amount
+            balance -= total_amount
         else:
-            account.balance += total_amount
+            balance += total_amount
         account.save()
         return instance
