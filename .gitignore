@@ -9,6 +9,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+trading_system/__pycache__/
+trading_system/*/__pycache__/
+trading_system/*/*/__pycache__/
+trading_system/*/*/*/__pycache__/
 # C extensions
 *.so
 
