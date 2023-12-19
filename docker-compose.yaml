@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: .
+    restart: unless-stopped
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+
+  db:
+    build:
+      context: docker/mysql
+    restart: unless-stopped
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      MYSQL_ONETIME_PASSWORD: 1
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
+      MYSQL_DATABASE: "${DB_DATABASE}"
+      MYSQL_USER: "${DB_USERNAME}"
+      MYSQL_PASSWORD: "${DB_PASSWORD}"
+      MYSQL_TCP_PORT: "${DB_PORT:-3306}"
+    ports:
+      - "${DB_PORT}:${DB_PORT}"
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: unless-stopped
+    environment:
+      PMA_HOST: db
+      PMA_PORT: "${DB_PORT}"
+    ports:
+      - "${PMA_PORT:-5050}:80"

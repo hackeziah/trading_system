@@ -13,6 +13,10 @@ trading_system/*/__pycache__/
 trading_system/*/*/__pycache__/
 trading_system/*/*/*/__pycache__/
 
+trading_system/__pycache__/
+trading_system/*/__pycache__/
+trading_system/*/*/__pycache__/
+trading_system/*/*/*/__pycache__/
 # C extensions
 *.so
 
